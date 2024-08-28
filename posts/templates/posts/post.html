@@ -1,0 +1,15 @@
+<div class="container d-flex flex-column align-items-center">
+    <div class="card w-80 mb-4" style="width: 80%;">
+        <div class="card-header text-center">
+            <h2><a href="{% url 'detail' post.id %}">{{ post.title }}</a></h2>
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0 text-center">
+                <p>{{ post.body }}</p>
+                <hr>
+                <footer class="blockquote-footer">Author: <cite title="Source Title">{{post.author}}</cite></footer>
+                <a href="{% url 'delete' post.id %}" class="btn btn-danger btn-small">Delete Post</a>
+            </blockquote>
+        </div>
+    </div>
+</div>
